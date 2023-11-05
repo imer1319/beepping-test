@@ -14,7 +14,9 @@ class OrderLineFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'order_id' => $this->faker->numberBetween(1, 5),
+            'product_id' => $this->faker->numberBetween(1, 10),
+            'qty' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

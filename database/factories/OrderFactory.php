@@ -14,7 +14,8 @@ class OrderFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'order_ref' => $this->faker->unique()->word,
+            'customer_name' => $this->faker->name,
         ];
     }
 }
