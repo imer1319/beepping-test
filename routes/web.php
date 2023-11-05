@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Order;
 use App\Jobs\CalculateTotalCost;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
 Route::get('/calcular-coste', function () {
     CalculateTotalCost::dispatch();
