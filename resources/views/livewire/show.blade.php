@@ -41,8 +41,9 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="4"></td>
-                                <td><b>Total:</b> {{ $order->orderLines->sum('qty') }}</td>
+                                <td colspan="3"></td>
+                                <td><b>Total:</b> {{ $totalCantidad }}</td>
+                                <td><b>Total:</b> {{ $total }}</td>
                             </tr>
                         </tfoot>
                     </table>

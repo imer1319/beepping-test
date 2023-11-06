@@ -18,7 +18,7 @@
                 <tr>
                     <td>{{ $order->order_ref }}</td>
                     <td>{{ $order->customer_name }}</td>
-                    <td>{{ $order->orderLines->sum('qty') }}</td>
+                    <td>{{ $order->order_lines_sum_qty }}</td>
                     <td>
                         <a data-toggle="modal" data-target="#verModal" class="btn btn-primary"
                             wire:click="show({{ $order->id }})">Ver</a>
