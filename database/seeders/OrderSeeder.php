@@ -21,9 +21,14 @@ class OrderSeeder extends Seeder
         $products = Product::factory(10)->create();
 
         $orders->each(function ($order) use ($products) {
-            $order->orderLines()->saveMany(OrderLine::factory(5)->make([
-                'product_id' => $products->random()->id,
-            ]));
+            $numOrderLines = rand(1, 5);
+
+            for ($i = 0; $i < $numOrderLines; $i++) {
+                $order->orderLines()->create([
+                    'product_id' => $products->random()->id,
+                    'qty' => rand(10, 100)
+                ]);
+            }
         });
     }
 }
